@@ -44,15 +44,25 @@ a {
 /* Aqui estão as configurações gerais do conteúdo */
 .conteudo {
     margin: 5%;
+    padding: 0 5%;
     height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 2em;
 }
 .conteudo h1 {
     color: rgb(0, 68, 184);
+}
+.conteudo h5 {
+    margin: 0%;
+    text-align: left;
+}
+.lado-a-lado {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Aqui estão as configurações do marquee */
@@ -63,4 +73,8 @@ marquee {
     bottom: 0;
     color: #F5F2ED;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul {
+    border: black 1px solid;
 }
