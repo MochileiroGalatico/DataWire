@@ -1,103 +1,116 @@
-/* =============================================
-   ESTILO.CSS — Blog de Animes
-   Trabalho Acadêmico
-   ============================================= */
- 
-/* ===== GERAL ===== */
+/* ===== CONFIGURAÇÕES GERAIS ===== */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-  color: #222;
+  font-family: Arial, sans-serif; /* Define o tipo de letra do site */
+  background-color: #F5F2ED;    /* Define a cor de fundo da página */
+  margin: 0;                     /* Remove espaços vazios nas bordas da página */
+  padding: 0;                    /* Remove espaços internos padrão */
+  color: #222;                   /* Define a cor padrão do texto */
 }
  
-/* ===== CABEÇALHO ===== */
+/* ===== CABEÇALHO (Topo do Site) ===== */
 .cabecalho {
-  background-color: #ffffff;
-  border-bottom: 3px solid #111;
-  text-align: center;
-  padding: 18px 10px 12px 10px;
+  background-color: rgb(0, 68, 184); /* Cor azul de fundo do topo */
+  color: #F5F2ED;                    /* Cor do texto no topo */
+  border-bottom: 3px solid #ffffff;  /* Linha branca na parte de baixo do topo */
+  padding: 18px 10px 12px 10px;      /* Espaçamento interno do topo */
+
+  display: flex;               /* Ativa o modo flexível para alinhar itens */
+  align-items: center;         /* Alinha os itens verticalmente no centro */
+  justify-content: space-between; /* Espalha os itens (logos nas pontas, título no meio) */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Sombra para dar profundidade */
 }
- 
+
+/* Configuração das Logos */
+.logo1, .logo2 {
+  width: 150px; /* Define a largura das imagens das logos */
+}
+
+/* Área do Texto Central */
+.texto {
+  flex: 1;              /* Faz com que o texto ocupe o espaço central disponível */
+  text-align: center;   /* Centraliza o texto */
+  padding: 0 20px;      /* Espaço nas laterais do texto */
+}
+
+/* Estilo do Título (Formato Oval) */
 .titulo-oval {
-  display: inline-block;
-  background-color: #ffffff;
-  border: 3px solid #111;
-  border-radius: 50px;
-  padding: 10px 50px;
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  color: #111;
+  display: inline-block;        /* Permite que o fundo envolva apenas o texto */
+  background-color: #F5F2ED;    /* Cor de fundo do título */
+  border: 3px solid rgb(255, 255, 255); /* Borda branca ao redor */
+  border-radius: 50px;          /* Deixa as bordas bem arredondadas (oval) */
+  padding: 10px 50px;           /* Espaçamento interno para o texto não encostar na borda */
+  font-size: 28px;              /* Tamanho da letra */
+  font-weight: bold;            /* Deixa a letra em negrito */
+  letter-spacing: 3px;          /* Aumenta o espaço entre as letras */
+  color: rgb(0, 68, 184);       /* Cor azul do texto */
 }
  
-/* ===== MENU ===== */
+/* ===== MENU DE NAVEGAÇÃO ===== */
 .menu {
-  background-color: #111;
-  text-align: center;
-  padding: 10px;
+  background-color: rgb(0, 68, 184); /* Cor de fundo do menu */
+  text-align: center;                /* Centraliza os links */
+  padding: 10px;                     /* Espaçamento interno */
 }
  
 .menu a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 18px;
-  font-size: 14px;
-  font-weight: bold;
+  color: #F5F2ED;          /* Cor dos links */
+  text-decoration: none;   /* Remove o sublinhado padrão dos links */
+  margin: 0 18px;          /* Espaço entre um link e outro */
+  font-size: 14px;         /* Tamanho da letra do menu */
+  font-weight: bold;       /* Letra em negrito */
 }
  
 .menu a:hover {
-  color: #ffcc00;
-  text-decoration: underline;
+  color: #ffffff;            /* Muda a cor quando passa o mouse por cima */
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
  
 /* ===== CONTEÚDO CENTRAL ===== */
 .conteudo {
-  max-width: 960px;
-  margin: 30px auto;
-  padding: 0 15px;
+  max-width: 1200px; /* Define a largura máxima que o conteúdo pode ocupar */
+  margin: 30px auto; /* Centraliza o conteúdo na tela e dá espaço em cima/baixo */
+  padding: 0 15px;   /* Espaço nas laterais internas */
 }
  
-/* ===== BLOCOS DE ANIME (imagem + texto) ===== */
+/* ===== BLOCOS DE CONTEÚDO (Tabelas de Layout) ===== */
 .bloco {
-  display: table;
-  width: 100%;
-  border-spacing: 15px;
-  margin-bottom: 30px;
+  display: table;      /* Faz a div se comportar como uma tabela */
+  width: 100%;         /* Ocupa toda a largura disponível */
+  border-spacing: 15px; /* Cria espaço entre as "células" da tabela */
+  margin-bottom: 30px; /* Espaço abaixo de cada bloco */
 }
  
 .coluna-esquerda {
-  display: table-cell;
-  width: 55%;
-  vertical-align: top;
+  display: table-cell; /* Se comporta como uma coluna de tabela */
+  width: 55%;          /* Ocupa 55% da largura */
+  vertical-align: top; /* Alinha o conteúdo no topo da coluna */
 }
  
 .coluna-direita {
-  display: table-cell;
-  width: 45%;
-  vertical-align: top;
+  display: table-cell; /* Se comporta como uma coluna de tabela */
+  width: 45%;          /* Ocupa 45% da largura */
+  vertical-align: top; /* Alinha o conteúdo no topo da coluna */
 }
  
 /* ===== IMAGENS ===== */
 .img-grande {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
-  border: 3px solid #111;
+  width: 100%;          /* Ocupa toda a largura da coluna */
+  height: 230px;        /* Altura fixa */
+  object-fit: cover;    /* Corta a imagem para preencher o espaço sem distorcer */
+  display: block;       /* Remove espaços vazios abaixo da imagem */
+  border: 3px solid rgb(0, 68, 184); /* Borda azul ao redor da imagem */
 }
  
 .img-dupla {
-  display: table;
+  display: table;      /* Cria um sub-layout de tabela para duas imagens */
   width: 100%;
-  border-spacing: 8px;
-  margin-top: 8px;
+  border-spacing: 8px; /* Espaço entre as duas imagens */
+  margin-top: 8px;     /* Espaço acima do bloco de imagens */
 }
  
 .img-dupla-cell {
   display: table-cell;
-  width: 50%;
+  width: 50%;          /* Cada imagem ocupa metade do espaço */
 }
  
 .img-pequena {
@@ -105,62 +118,65 @@ body {
   height: 120px;
   object-fit: cover;
   display: block;
-  border: 3px solid #111;
-  border-radius: 10px;
+  border: 3px solid rgb(0, 68, 184);
+  border-radius: 10px; /* Bordas arredondadas nas imagens pequenas */
 }
  
 /* ===== CAIXA DE TEXTO ===== */
 .caixa-texto {
-  border: 3px solid #111;
-  background-color: #ffffff;
-  padding: 18px;
-  box-sizing: border-box;
+  border: 3px solid rgb(0, 68, 184); /* Borda azul grossa */
+  background-color: #ffffff;         /* Fundo branco */
+  padding: 18px;                     /* Espaço interno para o texto */
+  box-sizing: border-box;            /* Garante que a borda não aumente o tamanho da caixa */
+  border-radius: 25px;               /* Bordas bem arredondadas */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Sombra */
 }
  
 .caixa-texto h3 {
-  margin-top: 0;
-  font-size: 16px;
-  color: #111;
-  border-bottom: 2px solid #111;
-  padding-bottom: 6px;
+  margin-top: 0;                     /* Remove espaço acima do título */
+  font-size: 16px;                   /* Tamanho da letra do título interno */
+  color: rgb(0, 68, 184);            /* Cor azul do título */
+  border-bottom: 2px solid rgb(0, 68, 184); /* Linha azul abaixo do título */
+  padding-bottom: 6px;               /* Espaço entre o título e a linha */
 }
  
 .caixa-texto p {
-  text-align: justify;
-  line-height: 1.8;
-  font-size: 14px;
-  color: #333;
+  text-align: justify; /* Deixa o texto alinhado nas duas extremidades */
+  line-height: 1.8;    /* Aumenta o espaço entre as linhas (leitura mais fácil) */
+  font-size: 14px;     /* Tamanho da letra do parágrafo */
+  color: #333;         /* Cor cinza escuro para o texto */
 }
  
 /* ===== TÍTULOS DE SEÇÃO ===== */
 .secao-titulo {
   font-size: 18px;
   font-weight: bold;
-  border-left: 5px solid #111;
-  padding-left: 10px;
-  margin: 30px 0 12px 0;
+  border-left: 5px solid rgb(0, 68, 184); /* Faixa azul na lateral esquerda */
+  padding-left: 10px;                     /* Espaço entre a faixa e o texto */
+  margin: 30px 0 12px 0;                  /* Espaçamento externo */
+  color: rgb(0, 68, 184);
 }
  
 .titulo-temporada {
   font-size: 17px;
   font-weight: bold;
-  background: #111;
-  color: #fff;
-  padding: 8px 12px;
+  background: rgb(0, 68, 184); /* Fundo azul para o título */
+  color: #F5F2ED;              /* Texto claro */
+  padding: 8px 12px;           /* Espaço interno */
   margin-bottom: 0;
 }
  
-/* ===== TABELAS ===== */
+/* ===== TABELAS DE DADOS ===== */
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /* Une as bordas das células em uma só */
   background-color: #ffffff;
   margin-bottom: 15px;
 }
  
 table th {
-  background-color: #111111;
-  color: white;
+  background-color: rgb(0, 68, 184); /* Fundo azul para o cabeçalho da tabela */
+  color: white;                      /* Texto branco */
   padding: 11px;
   text-align: left;
   font-size: 14px;
@@ -168,171 +184,47 @@ table th {
  
 table td {
   padding: 11px;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc; /* Linha cinza clara entre as linhas da tabela */
   font-size: 14px;
   text-align: justify;
 }
  
 table tr:hover {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; /* Muda a cor da linha quando passa o mouse */
 }
  
 table a {
-  color: #111;
+  color: rgb(0, 68, 184);
   font-weight: bold;
   text-decoration: none;
 }
  
-table a:hover {
-  color: #cc0000;
-  text-decoration: underline;
-}
- 
-/* ===== BADGES ===== */
-.badge {
-  background-color: #cc0000;
-  color: white;
-  padding: 2px 7px;
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: bold;
-}
- 
-.badge-ok {
-  background-color: #228b22;
-  color: white;
-  padding: 2px 7px;
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: bold;
-}
- 
-/* ===== IFRAME ===== */
+/* ===== VÍDEOS (IFRAME) ===== */
 iframe {
   width: 100%;
   max-width: 720px;
   height: 360px;
-  border: 2px solid #111;
-}
- 
-/* ===== SEÇÃO DO YUTA E CACHORRO ===== */
-.secao-mascotes {
-  width: 100%;
-  background: transparent;
-  border: none;
-  margin-bottom: 10px;
-}
- 
-.secao-mascotes td {
-  border: none;
-  background: transparent;
-}
- 
-.td-yuta {
-  width: 120px;
-  vertical-align: bottom;
-  text-align: center;
-  padding-bottom: 0;
-}
- 
-.img-yuta {
-  height: 350px;
-  object-fit: contain;
-}
- 
-.nome-yuta {
-  font-size: 19px;
-  margin: 2px 0 0 0;
-  color: #1f2b41;
-}
- 
-.td-balao {
-  vertical-align: middle;
-  padding: 0 10px;
-}
- 
-.balao-fala {
-  color: #2b3952;
-  font-size: 19px;
-  font-weight: bold;
-  line-height: 1.8;
-  text-align: justify;
-}
- 
-.td-cachorro {
-  width: 130px;
-  vertical-align: bottom;
-  text-align: center;
-  padding-bottom: 0;
-}
- 
-.balao-au {
-  display: inline-block;
-  background-color: #233141;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 50%;
-  border: 3px solid #193957;
-  margin-bottom: 6px;
-  cursor: pointer;
-  text-decoration: none;
-}
- 
-.emoji-cachorro {
-  font-size: 90px;
-  line-height: 1;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-}
- 
-.clica-cachorro {
-  font-size: 11px;
-  color: #1d2a36;
-  margin: 2px 0 0 0;
-  font-weight: bold;
-}
- 
-.site-cachorro {
-  font-size: 10px;
-  color: #174ab9;
-  margin: 0;
-}
- 
-/* ===== BOTÃO VOLTAR ===== */
-.botao-voltar {
-  display: inline-block;
-  margin: 25px 0 10px 0;
-  background-color: #111;
-  color: white;
-  padding: 11px 22px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  border-radius: 4px;
-}
- 
-.botao-voltar:hover {
-  background-color: #333;
+  border: 2px solid rgb(0, 68, 184);
 }
  
 /* ===== RODAPÉ ===== */
 .rodape {
-  background-color: #111;
-  color: #aaaaaa;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+  background-color: rgb(0, 68, 184); /* Cor azul de fundo */
+  color: #F5F2ED;                    /* Cor do texto clara */
+  text-align: center;                /* Centraliza o texto */
+  padding: 15px;                     /* Espaço interno */
+  margin-top: 40px;                  /* Espaço acima do rodapé */
   font-size: 13px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
  
 .rodape a {
-  color: #ffcc00;
+  color: #ffffff;
   text-decoration: none;
 }
  
-.rodape a:hover {
-  text-decoration: underline;
-}
+/* ===== EFEITO DE SELEÇÃO ===== */
+/* Muda a cor quando você seleciona o texto com o mouse */
+::selection {
+    background-color: #F5F2ED; /* Cor de fundo da seleção */
+    color: rgb(0, 68, 184);    /* Cor do texto selecionado */}
