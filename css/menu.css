@@ -1,5 +1,4 @@
 body {
-    border: aqua none 5px;
     margin: auto;
     background-color: #F5F2ED;
 }
@@ -36,28 +35,25 @@ th {
 /* Aqui estão as configurações gerais do conteúdo */
 .conteudo {
     margin: 3%;
-    height: 650px;
+    height: 500px;
     display: flex;
     flex-direction: row;
 }
 .esquerda {
     margin-top: 5px;
-    height: 95%;
+    height: 100%;
     width: 50%;
 }
 .direita {
     margin-top: 5px;
-    height: 95%;
+    height: 100%;
     width: 50%;
 }
 .noticia {
-    border: rgb(0, 68, 184) solid 2px;
     margin: 1px;
-    height: 95%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 
     background-size: cover;
@@ -65,7 +61,42 @@ th {
     background-repeat: no-repeat;
 }
 #metade {
-    height: 46%;
+    height: 50%;
+}
+
+.conteudo2 {
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2em;
+}
+.conteudo2 a {
+    margin: 1px;
+}
+.noticia2 {
+    margin: 1px;
+
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+.noticia2 img {
+    margin: 1px;
+    width: 40%;
+    height: auto;
+}
+.resumo {
+    color: #000;
+    width: 60%;
+    margin-left: 1px;
+}
+.resumo hr {
+    color: rgb(0, 68, 184);
+    width: 90%;
 }
 
 /* Aqui estão as configurações de todos os links da tag "a" */
@@ -83,7 +114,6 @@ a .fundo {
     text-align: center;
     font-size: 150%;
     background-color: rgba(0, 0, 0, 0.45);
-    border-radius: 25px;
     padding-left: 5%;
     padding-right: 5%;
 }

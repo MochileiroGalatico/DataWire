@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/x-icon" href="../image/logo/logo.png">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/noticia.css">
+</head>
+<body>
+    <!--Cabeçalho da página-->
+    <div class="header">
+        <div class="linha1">
+            <!--Link para menu é a própria logo-->
+            <a href="../index.html"><img src="../image/logo/logo2.png" alt=""></a>
+        </div>
+        <div class="linha2">
+            <table>
+                <!--Tema Esporte-->
+                <th><a href="esporte.html">ESPORTE</a></th>
+
+                <!--Tema Culinária-->
+                <th><a href="culinaria.html">CULINÁRIA</a></th>
+
+                <!--Tema Tecnologia-->
+                <th><a href="tecnologia.html">TECNOLOGIA</a></th>
+
+                <!--Tema Música-->
+                <th><a href="musica.html">MÚSICA</a></th>
+
+                <!--Tema Cinema-->
+                <th><a href="cinema.html">CINEMA</a></th>
+
+                <!--Tema Anime-->
+                <th><a href="anime.html">ANIME</a></th>
+            </table>
+        </div>
+    </div>
+
+    <!--Este é o campo onde será colocado o conteúdo da matéria-->
+    <div class="conteudo">
+
+        <style>
+            .conteudo {
+                text-align: left;
+            }
+        </style>
+
+        <h2 style="color: rgb(0, 68, 184);" >Inscreva-se em nosso site para receber nossa newsletter de notícias diariamente</h2>
+
+        <form method="post" action="recebe_dados.php">
+
+            <fieldset>
+                <legend>Dados pessoais</legend>
+
+                <table style="width:auto; border:none;">
+                    <tr>
+                        <td style="padding:5px;">Nome:</td>
+                        <td>
+                            <input type="text" name="nome" required minlength="3" placeholder="Digite seu nome">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:5px;">Email:</td>
+                        <td>
+                            <input type="email" name="email" required placeholder="Digite seu email">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:5px;">Senha:</td>
+                        <td>
+                            <input type="password" name="senha" required minlength="6" maxlength="10">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Preferências</legend>
+
+                <table style="width:auto;">
+                    <tr>
+                        <td style="padding:5px;">Frequência:</td>
+                        <td>
+                            <select name="frequencia" required>
+                                <option value="">Selecione</option>
+                                <option value="diario">Diariamente</option>
+                                <option value="semanal">Semanalmente</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:5px;">Sexo:</td>
+                        <td>
+                            <input type="radio" name="sexo" value="masc" required> Masculino
+                            <input type="radio" name="sexo" value="fem"> Feminino
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Editorias de interesse</legend>
+
+                <div style="padding:5px;">
+                    <input type="checkbox" name="editoria[]" value="esporte"> Esporte<br>
+                    <input type="checkbox" name="editoria[]" value="culinaria"> Culinária<br>
+                    <input type="checkbox" name="editoria[]" value="tecnologia"> Tecnologia<br>
+                    <input type="checkbox" name="editoria[]" value="musica"> Música<br>
+                    <input type="checkbox" name="editoria[]" value="cinema"> Cinema<br>
+                    <input type="checkbox" name="editoria[]" value="anime"> Anime
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Mensagem</legend>
+
+                <table style="width:auto;">
+                    <tr>
+                        <td style="padding:5px;">Comentários:</td>
+                        <td>
+                            <textarea name="comentario" rows="4" cols="40" maxlength="200" placeholder="Digite sua mensagem"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+
+        </form>
+        
+        <br>
+
+        <a href="" style="color: rgb(0, 68, 184); text-align: center;">Voltar ao topo da página</a>
+
+        <br>
+
+    </div>
+    
+    <!--Rodapé da página-->
+    <marquee behavior="scroll" direction="left">
+        © DataWire - Site de Notícias | Integrantes: Francisco, Gabriel, Giovanna, João Pedro, João Victor, Patricia, Ronaldo e Vinicius
+    </marquee>
+</body>
+</html>
